@@ -350,7 +350,26 @@ footer p:nth-child(2){
 width: 80%;
 
 }
+.pics
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3%;
+}
 
+.pic1-sets
+{
+  width: 60%;
+}
+.pic2-sets
+{
+  width: 50%;
+}
+.pic3-sets
+{
+  width: 32%;
+}
 
 }
 
@@ -638,7 +657,7 @@ width: 80%;
 	border-radius: 40px;
 	color: #fff;
 	font-size: 30px;
-	line-height: 52px;
+	line-height: 48px;
 	vertical-align: middle;
 	background: #d6249f;
 	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
@@ -707,5 +726,24 @@ h2
   width: 60%;
   
   }
+.pics
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3%;
+}
+.pic1-sets
+{
+  width: 60%;
+}
+.pic2-sets
+{
+  width: 50%;
+}
+.pic3-sets
+{
+  width: 32%;
+}
 
 }
