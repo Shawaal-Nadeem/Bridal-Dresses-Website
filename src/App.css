@@ -1,38 +1,583 @@
-.App {
-  text-align: center;
+body{
+  background-color: white;
 }
+@media screen and (max-width:766px)
+{
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  nav{
+    background-color: black;
+    height: 100px;
+    width: 100%;
+    margin-bottom: 3%;
   }
+  .img-size{
+    height: 90px;
+    margin-top: 0.5%;
+    margin-left: 3%;
+  }
+
+
+  :root {
+    --primary-color: rgb(58, 66, 76);
+    --overlay-color: rgba(58, 66, 76 , 0.85);
+    --menu-speed: 0.75s;
+    }
+    
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+    }
+    
+    .container {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 3rem;
+    }
+    
+  
+    .showcase h1 {
+    font-size: 4rem;
+    }
+    
+    .showcase p {
+    font-size: 1.3rem;
+    }
+    
+  
+    .btn:hover {
+    opacity: 0.7;
+    }
+    
+   
+    .menu-wrap {
+    position: sticky;
+    margin-top: -85px;
+    margin-left: 80%;
+    margin-right: 20px;
+    z-index: 1;
+    }
+    
+    .menu-wrap .toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+    }
+    
+    .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 60px;
+    height: 80px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+  
+    /* Hamburger Line */
+    .menu-wrap .hamburger > div {
+    position: relative;
+    flex: none;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    
+    }
+    
+    /* Hamburger Lines - Top & Bottom */
+    .menu-wrap .hamburger > div::before,
+    .menu-wrap .hamburger > div::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 4px;
+    background: inherit;
+    
+    }
+    
+    /* Moves Line Down */
+    .menu-wrap .hamburger > div::after {
+    top: 10px;
+    }
+    
+    /* Toggler Animation */
+    .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+    }
+    
+    /* Turns Lines Into X */
+    .menu-wrap .toggler:checked + .hamburger > div:before,
+    .menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+    }
+    
+    /* Rotate On Hover When Checked */
+    .menu-wrap .toggler:checked:hover + .hamburger > div {
+    transform: rotate(225deg);
+    }
+    
+    /* Show Menu */
+    .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+    }
+    
+    .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+    }
+    
+    .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition:  opacity 0.4s ease 0.4s;
+    }
+    
+    .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .menu-wrap .menu > div {
+    background: var(--overlay-color);
+    border-radius: 50%;
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+    }
+    
+    .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    }
+    
+    .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem;
+    }
+    .menu-wrap .menu > div > div > ul > li:hover {
+    color: rgb(120, 155, 162);
+  
+    }
+    
+    .menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease;
+    }
+  
+ 
+  .btn-nav{
+    margin-top: 0%;
+    margin-right: 2%;
+  }
+
+footer{
+	position: relative;
+	width: 100%;
+	height: 300px;
+	background: #101010;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+footer p:nth-child(1){
+	font-size: 20px;
+	color: white;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+footer p:nth-child(2){
+	color: white;
+	font-size: 17px;
+	width: 100%;
+	text-align: center;
+	line-height: 26px;
+}
+.social{
+	display: flex;
+}
+.social #whatsapp{
+	width: 45px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background:  rgb(89, 206, 100);
+	border-radius: 50%;
+	margin: 22px 10px;
+	color: white;
+	text-decoration: none;
+	font-size: 30px;
+
+
+}
+.social #gmail{
+	width: 45px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background:  transparent;
+	border-radius: 30%;
+	margin: 22px 10px;
+	color: white;
+	text-decoration: none;
+	font-size: 10px;
+	margin-left: 40px;
+
+}
+.social #insta{
+	width: 45px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	background:  transparent;
+	border-radius: 50%;
+	margin: 22px 10px;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	display: inline-block;
+	
+	text-align: center;
+	border-radius: 40px;
+	color: #fff;
+	font-size: 30px;
+	line-height: 47px;
+	vertical-align: middle;
+	background: #d6249f;
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+	box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+	margin-left: 40px;
+
+}
+.social a:hover{
+	transform: scale(1.3);
+	transition: .3s;
+}
+.end{
+	position: absolute;
+	color:rgb(94, 119, 149);
+	bottom: 35px;
+	font-size: 14px; 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logo-image
+{
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+.logo-image>img
+{
+  width: 60%;
+}
+.video
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+}
+.video>video
+{
+  width: 90%;
+  height: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.content
+{
+  margin-left: 1%;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+.heading
+{
+  font-size: 190%;
+  
+}
+.v1
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+}
+.v1>video{
+width: 50%;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+}
+
+ 
+@media screen and (min-width:767px)
+{ 
+  
+  
+  *{
+    padding: 0;
+    margin: 0;
+    font-family: 'Josefin Sans', sans-serif;
+    box-sizing: border-box;
   }
-  to {
-    transform: rotate(360deg);
+    
+    .menu-wrap .toggler {
+    cursor: pointer;
+    opacity: 0;
+    }
+    
+    .menu-wrap .menu > div > div > ul{
+    display: flex;
+  flex-direction: row;
+ margin-top: -8%;
+ 
+    }
+    
+    .menu-wrap .menu > div > div > ul > li {
+    display: flex;
+    color: #fff;
+    }
+
+
+  nav{
+    background-color: black;
+    height: 100px;
+    width: 100%;
   }
+  .img-size{
+    height: 90px;
+    width: auto;
+    margin-top: 0.5%;
+    margin-left: 3%;
+  }
+  nav ul{
+    float: right;
+    margin-right: 2%;
+   
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    border-style:hidden;
+   font-weight: bold;
+  }
+  nav ul li{
+    display: inline-block;
+    
+   
+  
+  }
+
+  .navbtn{
+    cursor: pointer;
+    font-size: 28px;
+    color: white;
+    border-style:hidden;
+   font-weight: bold;
+   margin-left: 50px;
+   text-decoration: none;
+   /* padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 45px;
+   padding-bottom: 45px; */
+
+  }
+  .navbtn:hover{
+  background-color: rgb(58, 66, 76);
+  
+  }
+  .btn-nav{
+    margin-top: 0%;
+    margin-right: 2%;
+  }
+
+  footer{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background: #101010;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  footer p:nth-child(1){
+    font-size: 30px;
+    color: white;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  footer p:nth-child(2){
+    color: white;
+    font-size: 17px;
+    width: 100%;
+    text-align: center;
+    line-height: 26px;
+  }
+.social{
+	display: flex;
+}
+.social #whatsapp{
+	width: 45px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background:  rgb(89, 206, 100);
+	border-radius: 50%;
+	margin: 22px 10px;
+	color: white;
+	text-decoration: none;
+	font-size: 30px;
+
+
+}
+.social #gmail{
+	width: 45px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background:  transparent;
+	border-radius: 30%;
+	margin: 22px 10px;
+	color: white;
+	text-decoration: none;
+	font-size: 10px;
+	margin-left: 40px;
+
+}
+.social #insta{
+	width: 45px;
+	height: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	background:  transparent;
+	border-radius: 50%;
+	margin: 22px 10px;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	display: inline-block;
+	
+	text-align: center;
+	border-radius: 40px;
+	color: #fff;
+	font-size: 30px;
+	line-height: 52px;
+	vertical-align: middle;
+	background: #d6249f;
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+	box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+	margin-left: 40px;
+
+}
+.social a:hover{
+	transform: scale(1.3);
+	transition: .3s;
+}
+.end{
+	position: absolute;
+	color:rgb(94, 119, 149);
+	bottom: 35px;
+	font-size: 14px; 
+}
+
+.logo-image
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.video
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+}
+.video>video
+{
+  width: 90%;
+  height: auto;
+}
+
+.content
+{
+  margin-left: 1%;
+  margin-top: 10%;
+  margin-bottom: 5%;
+}
+.heading
+{
+  margin-top: 3%;
+  font-size: 190%;
+  margin-bottom: 1%;
+}
+h2
+{
+  margin-top: 3%;
+  margin-bottom: 1%;
+}
+.v1
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2%;
+}
+.v1>video{
+  width: 30%;
+  
+  }
+
 }
