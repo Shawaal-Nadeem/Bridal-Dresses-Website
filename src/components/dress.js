@@ -2,11 +2,12 @@ import React from 'react';
 
 
 function Dress() {
+ 
   return (
     <div>
     <div className='pics'>
        <img className='pic2-sets' src='/images/2.jpg'/>
-       <img className='pic2-sets' src='/images/3.jpg'/>   
+       <img className='pic2-sets' src='/images/3.jpg'/>
     </div>
     <div className='pics'>
        <img className='pic1-sets' src='/images/4.jpg'/>  
