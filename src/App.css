@@ -324,8 +324,8 @@ footer p:nth-child(2){
 }
 .video>video
 {
-  width: 90%;
-  height: auto;
+  height: 70%;
+  width: 95%;
 }
 
 .content
