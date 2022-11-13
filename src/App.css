@@ -355,21 +355,23 @@ width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   margin-top: 3%;
 }
 
 .pic1-sets
 {
-  width: 80%;
+  width: 90%;
   
 }
 .pic2-sets
 {
-  width: 50%;
+  width: 90%;
+  
 }
 .pic3-sets
 {
-  width: 32%;
+  width: 90%;
 }
 
 }
