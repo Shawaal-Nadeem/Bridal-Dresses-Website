@@ -12,7 +12,7 @@ return(
     <a id='whatsapp' href="https://wa.me/03364053573"><i class="fab fa-whatsapp"></i></a>
     <a id='insta' href="https://ig.me/m/ashir_couture"><i class="fab fa-instagram"></i></a>
   </div>
-  <p class="end">CopyRight By Shawaal Nadeem</p>
+  <p class="end">All Rights Reserved</p>
 </footer>
 
 </div>

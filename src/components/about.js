@@ -3,9 +3,9 @@ import React from "react";
 function About() {
   return (
     <div className="about-page">
-      <div className="v1">
-      <video loop autoPlay muted>
-  <source src="/videos/v1.mp4" type="video/mp4"></source>
+      <div className="video">
+      <video loop autoPlay muted poster="/images/post.png" >
+  <source src="/videos/v2.mp4" type="video/mp4"></source>
 </video>
       </div>
     <div className="content">
