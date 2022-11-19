@@ -3,7 +3,7 @@ body{
 }
 @media screen and (max-width:766px)
 {
-
+  .slideshow__text-wrap--mobile {background-color: transparent !important;visibility: hidden !important; }
   nav{
     background-color: black;
     height: 100px;
