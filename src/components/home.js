@@ -53,9 +53,10 @@ function Home() {
      <div class="carousel">
       <div class="carousel_inner">
          <div class="carousel_item carousel_item__active">
-            <img src="./images/21.jpg" alt="" class="carousel_img"/>
-            <div class="carousel_caption">
-            </div>
+            
+         </div>
+         <div class="carousel_item">
+            <img src="/images/21.jpg" alt="" class="carousel_img"/>
          </div>
          <div class="carousel_item">
             <img src="/images/58.jpg" alt="" class="carousel_img"/>
