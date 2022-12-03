@@ -1,7 +1,8 @@
 import React from 'react';
-
+import { useEffect } from 'react';
 
 function Home() {
+   useEffect(() => {
   window.addEventListener("load", () => {
     autoSlide();
  })
@@ -9,7 +10,7 @@ function Home() {
  function autoSlide() {
     setInterval(() => {
        slide(getItemActiveIndex() + 1);
-    }, 4000); // slide speed = 3s
+    }, 3000); // slide speed = 3s
  }
  
  function slide(toIndex) {
@@ -45,6 +46,7 @@ function Home() {
     const itemActiveIndex = itemsArray.indexOf(itemActive);
     return itemActiveIndex;
  }
+});
   return (
     <div>
         <div className='logo-image'>
